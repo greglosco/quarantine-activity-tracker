@@ -10,10 +10,12 @@ import rootReducer from './reducers/manageActivities'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App store={store} />
+  </Provider>
   document.getElementById('root')
 );
 
