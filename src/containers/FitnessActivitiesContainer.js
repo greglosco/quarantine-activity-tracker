@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FitnessActivitiesInput from '../components/fitnessactivities/FitnessActivitiesInput';
+import FitnessActivities from '../components/fitnessactivities/FitnessActivities';
 import { connect } from 'react-redux'
 
 class FitnessActivitiesContainer extends Component {
@@ -8,6 +9,7 @@ class FitnessActivitiesContainer extends Component {
         return (
             <div>FitnessActivitiesContainer
                 <FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} />
+                <FitnessActivities fitnessactivities={this.props.fitnessactivities} />
             </div>
         )
     }
