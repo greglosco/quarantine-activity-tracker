@@ -26,10 +26,10 @@ function App() {
         <main>
           <NavBar />
           <Route exact path='/' component={HomepageContainer} />
-          {/* <FitnessActivitiesContainer />
-          <RecipesContainer />
-          <HobbiesContainer />
-          <LivestreamsContainer /> */}
+          <Route exact path='/fitnessactivities' component={FitnessActivitiesContainer} />
+          <Route exact path='/recipes' component={RecipesContainer} />
+          <Route exact path='/hobbies' component={HobbiesContainer} />
+          <Route exact path='/livestreams' component={LivestreamsContainer} />
         </main>
       </div>
     </Router>
