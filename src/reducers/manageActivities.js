@@ -16,6 +16,8 @@ function fitnessActivitiesReducer(state = {
     switch (action.type) {
         case 'ADD_FITNESS_ACTIVITY':
             return {...state, fitnessActivities: [...state.fitnessActivities, action.exercise]}
+        default:
+            return state;
     }
 }
 
@@ -25,6 +27,8 @@ function recipesReducer(state = {
     switch (action.type) {
         case 'ADD_RECIPE':
             return {...state, recipes: [...state.recipes, action.name]}
+        default:
+            return state;
     }
 }
 
@@ -34,6 +38,8 @@ function hobbiesReducer(state = {
     switch (action.type) {
         case 'ADD_HOBBY':
             return {...state, hobbies: [...state.hobbies, action.exercise]}
+        default:
+            return state;
     }
 }
 
@@ -43,5 +49,7 @@ function livestreamsReducer(state = {
     switch (action.type) {
         case 'ADD_LIVESTREAM':
             return {...state, livestreams: [...state.livestreams, action.exercise]}
+        default:
+            return state;
     }
 }
