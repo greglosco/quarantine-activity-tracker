@@ -9,13 +9,13 @@ class FitnessActivitiesContainer extends Component {
         return (
             <div>FitnessActivitiesContainer
                 <FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} />
-                <FitnessActivities fitnessactivities={this.props.fitnessactivities} />
+                <FitnessActivities fitnessActivities={this.props.fitnessActivities} />
             </div>
         )
     }
 }
 
-const mapStateToProps = ({fitnessactivities}) => ({fitnessactivities})
+const mapStateToProps = ({fitnessActivities}) => ({fitnessActivities})
 
 const mapDispatchToProps = dispatch => ({
     addFitnessActivity: state => dispatch({type: 'ADD_FITNESS_ACTIVITY', state})
