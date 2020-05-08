@@ -6,7 +6,8 @@ import {
   Route 
 } from 'react-router-dom'
 
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import HomepageContainer from './containers/HomepageContainer';
 import FitnessActivitiesContainer from './containers/FitnessActivitiesContainer';
 import RecipesContainer from './containers/RecipesContainer';
 import HobbiesContainer from './containers/HobbiesContainer';
@@ -24,10 +25,11 @@ function App() {
         </header>
         <main>
           <NavBar />
-          <FitnessActivitiesContainer />
+          <Route exact path='/' component={HomepageContainer} />
+          {/* <FitnessActivitiesContainer />
           <RecipesContainer />
           <HobbiesContainer />
-          <LivestreamsContainer />
+          <LivestreamsContainer /> */}
         </main>
       </div>
     </Router>
