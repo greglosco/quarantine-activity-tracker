@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FitnessActivitiesContainer from './containers/FitnessActivitiesContainer';
-import RecipesContainer from './containers/FitnessActivitiesContainer';
-import HobbiesContainer from './containers/FitnessActivitiesContainer';
-import LivestreamsContainer from './containers/FitnessActivitiesContainer';
+import RecipesContainer from './containers/RecipesContainer';
+import HobbiesContainer from './containers/HobbiesContainer';
+import LivestreamsContainer from './containers/LivestreamsContainer';
 
 function App() {
   return (
