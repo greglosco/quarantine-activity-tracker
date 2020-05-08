@@ -10,15 +10,13 @@ function App() {
         <p>
           Welcome to the Quarantine Activity Tracker!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main>
+        <FitnessActivitiesContainer />
+        <RecipesContainer />
+        <HobbiesContainer />
+        <LivestreamsContainer />
+      </main>
     </div>
   );
 }
