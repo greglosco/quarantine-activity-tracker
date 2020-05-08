@@ -10,7 +10,12 @@ class FitnessActivitiesInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-
+        
+        this.setState({
+            exercise: "",
+            date: "",
+            notes: ""
+        })
     }
 
     handleOnChange = event => {
@@ -18,7 +23,6 @@ class FitnessActivitiesInput extends Component {
         this.setState({
             [name]: value
         })
-        console.log(this.state)
     }
 
     render() {
