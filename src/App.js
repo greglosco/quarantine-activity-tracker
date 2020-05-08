@@ -5,6 +5,8 @@ import {
   BrowserRouter as Router,
   Route 
 } from 'react-router-dom'
+
+import NavBar from './components/NavBar'
 import FitnessActivitiesContainer from './containers/FitnessActivitiesContainer';
 import RecipesContainer from './containers/RecipesContainer';
 import HobbiesContainer from './containers/HobbiesContainer';
@@ -21,6 +23,7 @@ function App() {
           </p>
         </header>
         <main>
+          <NavBar />
           <FitnessActivitiesContainer />
           <RecipesContainer />
           <HobbiesContainer />
