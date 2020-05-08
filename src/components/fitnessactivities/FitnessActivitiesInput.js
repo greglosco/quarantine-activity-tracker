@@ -10,7 +10,7 @@ class FitnessActivitiesInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-        
+        this.props.addFitnessActivity(this.state)
         this.setState({
             exercise: "",
             date: "",
