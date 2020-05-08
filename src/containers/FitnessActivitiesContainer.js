@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import FitnessActivitiesInput from '../components/fitnessactivities/FitnessActivitiesInput';
 
 class FitnessActivitiesContainer extends Component {
 
     render() {
         return (
-            <div>FitnessActivitiesContainer</div>
+            <div>FitnessActivitiesContainer
+                <FitnessActivitiesInput />
+            </div>
         )
     }
 }
