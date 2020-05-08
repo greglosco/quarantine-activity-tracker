@@ -10,9 +10,7 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 
-function fitnessActivitiesReducer(state = {
-    fitnessActivities: [],
-}, action) {
+function fitnessActivitiesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_FITNESS_ACTIVITY':
             return {...state, fitnessActivities: [...state.fitnessActivities, action.exercise]}
@@ -21,9 +19,7 @@ function fitnessActivitiesReducer(state = {
     }
 }
 
-function recipesReducer(state = {
-    recipes: [],
-}, action) {
+function recipesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_RECIPE':
             return {...state, recipes: [...state.recipes, action.name]}
@@ -32,9 +28,7 @@ function recipesReducer(state = {
     }
 }
 
-function hobbiesReducer(state = {
-    hobbies: [],
-}, action) {
+function hobbiesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_HOBBY':
             return {...state, hobbies: [...state.hobbies, action.exercise]}
@@ -43,9 +37,7 @@ function hobbiesReducer(state = {
     }
 }
 
-function livestreamsReducer(state = {
-    livestreams: [],
-}, action) {
+function livestreamsReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_LIVESTREAM':
             return {...state, livestreams: [...state.livestreams, action.exercise]}
