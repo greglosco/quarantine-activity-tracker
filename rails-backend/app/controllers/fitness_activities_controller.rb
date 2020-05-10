@@ -1,6 +1,8 @@
 class FitnessActivitiesController < ApplicationController
 
     def index
+        @fitnessActivities = FitnessActivities.all 
+        render json: FitnessActivitySerializer.new(@fitnessActivities).to_serialized_json
     end
 
     def create
