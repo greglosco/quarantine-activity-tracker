@@ -1,6 +1,6 @@
 class FitnessActivitySerializer
 
-    def intitialize(fa_obj)
+    def initialize(fa_obj)
         @fa = fa_obj
     end
 

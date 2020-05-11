@@ -13,7 +13,7 @@ export default rootReducer;
 function fitnessActivitiesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_FITNESS_ACTIVITY':
-            const fitnessActivity = {exercise: action.state.exercise, date: action.state.date, notes: action.state.notes, id: cuid()}
+            const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: cuid()}
             return [...state, fitnessActivity]
         default:
             return state;

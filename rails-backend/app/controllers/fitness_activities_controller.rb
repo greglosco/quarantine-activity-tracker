@@ -1,8 +1,8 @@
 class FitnessActivitiesController < ApplicationController
 
     def index
-        @fitnessActivities = FitnessActivities.all 
-        render json: FitnessActivitySerializer.new(@fitnessActivities).to_serialized_json
+        fitnessActivities = FitnessActivity.all 
+        render json: FitnessActivitySerializer.new(fitnessActivities).to_serialized_json
     end
 
     def create
@@ -12,7 +12,7 @@ class FitnessActivitiesController < ApplicationController
     private
 
     def fitness_activity_params
-        params.require(:fitnessActivity).permit(:exercise, :date, :notes)
+        params.require(:fitness_activity).permit(:exercise, :date, :notes)
     end
 
 end
