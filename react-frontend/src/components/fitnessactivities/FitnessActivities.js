@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FitnessActivity from './FitnessActivity'
+import FitnessActivity from './FitnessActivity';
 
 class FitnessActivities extends Component {
     
