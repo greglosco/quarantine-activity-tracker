@@ -6,7 +6,8 @@ class FitnessActivitiesController < ApplicationController
     end
 
     def create
-        FitnessActivity.create(fitness_activity_params)
+        fitnessActivity = FitnessActivity.create(fitness_activity_params)
+        render json: FitnessActivitySerializer.new(fitnessActivity).to_serialized_json
     end
 
     private

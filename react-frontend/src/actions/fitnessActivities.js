@@ -1,6 +1,6 @@
 export function addFitnessActivity(state) {
-    return function(dispatch) {
-        return fetch(`/fitness_activities`, {
+    return (dispatch) => {
+        fetch(`/fitness_activities`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",

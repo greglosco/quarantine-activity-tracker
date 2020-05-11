@@ -5,7 +5,8 @@ const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
     recipes: recipesReducer,
     hobbies: hobbiesReducer,
-    livestreams: livestreamsReducer
+    livestreams: livestreamsReducer,
+    loading: false
 });
 
 export default rootReducer;
