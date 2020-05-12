@@ -29,9 +29,9 @@ export function fetchFitnessActivities() {
     }
 }
 
-export const deleteFitnessActivity = (id) => {
+export function deleteFitnessActivity(id) {
     return {
         type: "DELETE_FITNESS_ACTIVITY",
         id
     }
-} 
+}

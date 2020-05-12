@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 
 class FitnessActivity extends Component {
 
+    handleOnClick = () => {
+        this.props.deleteFitnessActivity(this.props.fitnessActivity.id)
+    }
+
     render() {
         return (
             <div>
                 <li>
-                    {this.props.fitnessActivity.exercise}<br/>
-                    {this.props.fitnessActivity.date}<br/>
-                    {this.props.fitnessActivity.notes}<br/>
+                    DATE: {this.props.fitnessActivity.date} --  
+                    {this.props.fitnessActivity.exercise} -- 
+                    NOTES:{this.props.fitnessActivity.notes}
+                    <button onClick={this.handleOnClick} >X</button><br/>
                 </li>
             </div>
         )

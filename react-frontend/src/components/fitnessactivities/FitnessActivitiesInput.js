@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addFitnessActivity } from '../../actions/fitnessActivities';
+// import { connect } from 'react-redux';
+// import { addFitnessActivity } from '../../actions/fitnessActivities';
 
 class FitnessActivitiesInput extends Component {
 
@@ -41,4 +41,4 @@ class FitnessActivitiesInput extends Component {
     }
 }
 
-export default connect(null, { addFitnessActivity })(FitnessActivitiesInput);
+export default (FitnessActivitiesInput);
