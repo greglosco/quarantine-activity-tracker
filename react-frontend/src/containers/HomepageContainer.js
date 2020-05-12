@@ -9,8 +9,8 @@ class HomepageContainer extends Component {
 
     render() {
         return (
-            <div>HomepageContainer
-                <FitnessActivities fitnessActivities={this.props.fitnessActivities} fetchFitnessActivities={this.props.fetchFitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} />
+            <div>
+                Your Fitness Activities:<FitnessActivities fitnessActivities={this.props.fitnessActivities} fetchFitnessActivities={this.props.fetchFitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} />
             </div>
         )
     }

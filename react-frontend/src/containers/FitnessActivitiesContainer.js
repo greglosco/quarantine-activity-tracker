@@ -9,7 +9,7 @@ class FitnessActivitiesContainer extends Component {
 
     render() {
         return (
-            <div>FitnessActivitiesContainer
+            <div>Track Your Fitness Activities:
                 <FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} />
                 <FitnessActivities fetchFitnessActivities={this.props.fetchFitnessActivities} fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} />
             </div>

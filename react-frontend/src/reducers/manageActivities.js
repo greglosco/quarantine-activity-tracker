@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
-    // recipes: recipesReducer,
+    recipes: recipesReducer,
     // hobbies: hobbiesReducer,
     // livestreams: livestreamsReducer
 });
@@ -39,14 +39,35 @@ function fitnessActivitiesReducer(state = [], action) {
     }
 }
 
-// function recipesReducer(state = [], action) {
-//     switch (action.type) {
-//         case 'ADD_RECIPE':
-//             return {...state, recipes: [...state.recipes, action.name]}
-//         default:
-//             return state;
-//     }
-// }
+function recipesReducer(state = [], action) {
+    switch (action.type) {
+        case 'ADD_RECIPE':
+            const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: action.data.id}
+            return [...state, fitnessActivity]
+        case 'RENDER_FITNESS_ACTIVITIES':
+            return [...action.res]
+        case 'DELETE_RECIPE':
+            const recipes = state.filter(obj => obj.id !== action.id)
+            return [...recipes]
+        case 'EDIT_RECIPE':
+            return state.map(fitnessActivity => fitnessActivity.id === action.id ? {...fitnessActivity, editing: !fitnessActivity.editing}: fitnessActivity )
+        case 'UPDATE_RECIPE':
+            return state.map(fitnessActivity => {
+                if (fitnessActivity.id === action.data.id) {
+                    return {
+                        ...fitnessActivity,
+                        exercise: action.data.exercise,
+                        date: action.data.date,
+                        notes: action.data.notes,
+                        id: action.data.id,
+                        editing: !fitnessActivity.editing
+                    }
+                } else return fitnessActivity;
+            })
+        default:
+            return state;
+    }
+}
 
 // function hobbiesReducer(state = [], action) {
 //     switch (action.type) {
