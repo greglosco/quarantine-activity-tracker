@@ -30,8 +30,13 @@ export function fetchFitnessActivities() {
 }
 
 export function deleteFitnessActivity(id) {
-    return {
-        type: "DELETE_FITNESS_ACTIVITY",
-        id
+    return (dispatch) => {
+        fetch(`/fitness_activities`)
     }
+     
+}
+
+{
+    type: "DELETE_FITNESS_ACTIVITY",
+    id
 }
