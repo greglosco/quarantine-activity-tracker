@@ -5,8 +5,7 @@ const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
     recipes: recipesReducer,
     hobbies: hobbiesReducer,
-    livestreams: livestreamsReducer,
-    loading: false
+    livestreams: livestreamsReducer
 });
 
 export default rootReducer;
@@ -16,13 +15,8 @@ function fitnessActivitiesReducer(state = [], action) {
         case 'ADD_FITNESS_ACTIVITY':
             const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: cuid()}
             return [...state, fitnessActivity]
-        case 'LOADING_FITNESS_ACTIVITIES':
-            return {...state,
-                loading: true}
         case 'RENDER_FITNESS_ACTIVITIES':
-            return {...state,
-                ...action.res,
-                loading: false}
+            return [...state, ...action.res]
         default:
             return state;
     }

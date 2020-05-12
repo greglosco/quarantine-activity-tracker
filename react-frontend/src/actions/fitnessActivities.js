@@ -21,7 +21,6 @@ export function addFitnessActivity(state) {
 
 export function fetchFitnessActivities() {
     return dispatch => {
-        dispatch({type: "LOADING_FITNESS_ACTIVITIES"})
         fetch(`/fitness_activities`)
         .then(res => res.json())
         .then(res => {
