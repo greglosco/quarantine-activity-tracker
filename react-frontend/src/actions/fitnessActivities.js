@@ -45,3 +45,23 @@ export function deleteFitnessActivity(id) {
     } 
 }
 
+// export function editFitnessActivity(id) {
+//     return (dispatch) => {
+//         fetch(`http://localhost:3001/fitness_activities/${id}`, {
+//         method: 'PATCH',
+//         headers: {
+//             "Content-Type": "application/json",
+//             "Accept": "application/json"
+//         },
+//         body: JSON.stringify({
+//                 "exercise": state.exercise,
+//                 "date": state.date,
+//                 "notes": state.notes
+//         })
+//     })
+//     .then(res => res.json())
+//     .then(data => 
+//         dispatch({ type: 'ADD_FITNESS_ACTIVITY', data })
+//         )
+//     }
+// }
