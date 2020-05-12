@@ -28,3 +28,10 @@ export function fetchFitnessActivities() {
         })
     }
 }
+
+export const deleteFitnessActivity = (id) => {
+    return {
+        type: "DELETE_FITNESS_ACTIVITY",
+        id
+    }
+} 
