@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 
-class FitnessActivitiesInput extends Component {
+class EditFitnessActivity extends Component {
 
     state = {
-        exercise: "",
-        date: "",
-        notes: "",
-        editing: false
+        exercise: (this.props.fitnessActivity.exercise),
+        date: (this.props.fitnessActivity.date),
+        notes: (this.props.fitnessActivity.notes),
     }
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addFitnessActivity(this.state)
+        this.props.updateFitnessActivity(this.props.fitnessActivity.id, this.state)
         this.setState({
             exercise: "",
             date: "",
@@ -34,11 +33,12 @@ class FitnessActivitiesInput extends Component {
                     <input type="text" value={this.state.exercise} name="exercise" onChange={this.handleOnChange} />
                     <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} />
                     <input type="textarea" value={this.state.notes} name="notes" onChange={this.handleOnChange} />
-                    <input type="submit" />
+                    <input type="submit" value="Update" />
                 </form>
             </div>
         )
     }
+
 }
 
-export default (FitnessActivitiesInput);
+export default EditFitnessActivity;

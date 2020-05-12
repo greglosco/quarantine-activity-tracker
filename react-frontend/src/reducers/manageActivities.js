@@ -19,6 +19,21 @@ function fitnessActivitiesReducer(state = [], action) {
         case 'DELETE_FITNESS_ACTIVITY':
             const fitnessActivities = state.filter(obj => obj.id !== action.id)
             return [...fitnessActivities]
+        case 'EDIT_FITNESS_ACTIVITY':
+            return state.map(fitnessActivity => fitnessActivity.id === action.id ? {...fitnessActivity, editing: !fitnessActivity.editing}: fitnessActivity )
+        case 'UPDATE_FITNESS_ACTIVITY':
+            return state.map(fitnessActivity => {
+                if (fitnessActivity.id === action.data.id) {
+                    return {
+                        ...fitnessActivity,
+                        exercise: action.data.exercise,
+                        date: action.data.date,
+                        notes: action.data.notes,
+                        id: action.data.id,
+                        editing: !fitnessActivity.editing
+                    }
+                } else return fitnessActivity;
+            })
         default:
             return state;
     }

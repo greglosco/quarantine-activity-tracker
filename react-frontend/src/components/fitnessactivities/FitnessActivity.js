@@ -17,8 +17,8 @@ class FitnessActivity extends Component {
                     DATE: {this.props.fitnessActivity.date} --  
                     {this.props.fitnessActivity.exercise} -- 
                     NOTES:{this.props.fitnessActivity.notes}
-                    <button onClick={this.handleDeleteOnClick} >Edit</button><br/>
-                    <button onClick={this.handleEditOnClick} >X</button><br/>
+                    <button onClick={this.handleEditOnClick} >Edit</button>
+                    <button onClick={this.handleDeleteOnClick} >X</button><br/>
                 </li>
             </div>
         )
