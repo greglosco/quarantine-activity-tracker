@@ -42,27 +42,27 @@ function fitnessActivitiesReducer(state = [], action) {
 function recipesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_RECIPE':
-            const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: action.data.id}
-            return [...state, fitnessActivity]
-        case 'RENDER_FITNESS_ACTIVITIES':
+            const recipe = {name: action.data.name, date: action.data.date, notes: action.data.notes, id: action.data.id}
+            return [...state, recipe]
+        case 'RENDER_RECIPES':
             return [...action.res]
         case 'DELETE_RECIPE':
             const recipes = state.filter(obj => obj.id !== action.id)
             return [...recipes]
         case 'EDIT_RECIPE':
-            return state.map(fitnessActivity => fitnessActivity.id === action.id ? {...fitnessActivity, editing: !fitnessActivity.editing}: fitnessActivity )
+            return state.map(recipe => recipe.id === action.id ? {...recipe, editing: !recipe.editing}: recipe )
         case 'UPDATE_RECIPE':
-            return state.map(fitnessActivity => {
-                if (fitnessActivity.id === action.data.id) {
+            return state.map(recipe => {
+                if (recipe.id === action.data.id) {
                     return {
-                        ...fitnessActivity,
-                        exercise: action.data.exercise,
+                        ...recipe,
+                        name: action.data.name,
                         date: action.data.date,
                         notes: action.data.notes,
                         id: action.data.id,
-                        editing: !fitnessActivity.editing
+                        editing: !recipe.editing
                     }
-                } else return fitnessActivity;
+                } else return recipe;
             })
         default:
             return state;
