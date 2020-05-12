@@ -19,7 +19,7 @@ function fitnessActivitiesReducer(state = [], action) {
             return [...state, ...action.res]
         case 'DELETE_FITNESS_ACTIVITY':
             const fitnessActivities = state.filter(obj => obj.id !== action.id)
-            return {...state, fitnessActivities}
+            return [...fitnessActivities]
         default:
             return state;
     }

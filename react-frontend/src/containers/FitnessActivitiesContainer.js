@@ -7,15 +7,11 @@ import { connect } from 'react-redux';
 
 class FitnessActivitiesContainer extends Component {
 
-    componentDidMount() {
-        this.props.fetchFitnessActivities()
-    }
-
     render() {
         return (
             <div>FitnessActivitiesContainer
                 <FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} />
-                <FitnessActivities fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} />
+                <FitnessActivities fetchFitnessActivities={this.props.fetchFitnessActivities} fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} />
             </div>
         )
     }

@@ -3,11 +3,17 @@ import FitnessActivity from './FitnessActivity';
 
 class FitnessActivities extends Component {
 
-    render() {
+    componentDidMount() {
+       this.props.fetchFitnessActivities()
+    }
 
-        const fitnessActivities = this.props.fitnessActivities.map(fitnessActivity => <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={this.props.deleteFitnessActivity} />)
+    render() {
+        const {deleteFitnessActivity} = this.props;
+
+        const fitnessActivities = this.props.fitnessActivities.map(fitnessActivity => <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={deleteFitnessActivity} />)
 
         return (
+            console.log(fitnessActivities),
             <ul>
                 {fitnessActivities}
             </ul>
