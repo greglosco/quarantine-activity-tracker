@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FitnessActivitiesInput from '../components/fitnessactivities/FitnessActivitiesInput';
 import FitnessActivities from '../components/fitnessactivities/FitnessActivities';
-import { fetchFitnessActivities } from '../actions/fitnessActivities';
+import { fetchFitnessActivities, deleteFitnessActivity } from '../actions/fitnessActivities';
 
 import { connect } from 'react-redux';
 
@@ -15,7 +15,7 @@ class FitnessActivitiesContainer extends Component {
         return (
             <div>FitnessActivitiesContainer
                 <FitnessActivitiesInput />
-                <FitnessActivities fitnessActivities={this.props.fitnessActivities} />
+                <FitnessActivities fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} />
             </div>
         )
     }
@@ -23,4 +23,4 @@ class FitnessActivitiesContainer extends Component {
 
 const mapStateToProps = ({fitnessActivities}) => ({fitnessActivities})
 
-export default connect(mapStateToProps, { fetchFitnessActivities })(FitnessActivitiesContainer);
+export default connect(mapStateToProps, { fetchFitnessActivities, deleteFitnessActivity })(FitnessActivitiesContainer);
