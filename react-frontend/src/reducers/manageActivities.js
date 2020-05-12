@@ -15,7 +15,7 @@ function fitnessActivitiesReducer(state = [], action) {
             const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: action.data.id}
             return [...state, fitnessActivity]
         case 'RENDER_FITNESS_ACTIVITIES':
-            return [...state, ...action.res]
+            return [...action.res]
         case 'DELETE_FITNESS_ACTIVITY':
             const fitnessActivities = state.filter(obj => obj.id !== action.id)
             return [...fitnessActivities]
