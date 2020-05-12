@@ -13,7 +13,6 @@ class FitnessActivities extends Component {
         const fitnessActivities = this.props.fitnessActivities.map(fitnessActivity => <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={deleteFitnessActivity} />)
 
         return (
-            console.log(fitnessActivities),
             <ul>
                 {fitnessActivities}
             </ul>

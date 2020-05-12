@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import cuid from 'cuid';
 
 const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
@@ -13,7 +12,7 @@ export default rootReducer;
 function fitnessActivitiesReducer(state = [], action) {
     switch (action.type) {
         case 'ADD_FITNESS_ACTIVITY':
-            const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: cuid()}
+            const fitnessActivity = {exercise: action.data.exercise, date: action.data.date, notes: action.data.notes, id: action.data.id}
             return [...state, fitnessActivity]
         case 'RENDER_FITNESS_ACTIVITIES':
             return [...state, ...action.res]

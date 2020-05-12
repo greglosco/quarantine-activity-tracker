@@ -15,6 +15,12 @@ class FitnessActivitiesController < ApplicationController
         render json: FitnessActivitySerializer.new(fitnessActivity).to_serialized_json
     end
 
+    def destroy
+        fitnessActivity = FitnessActivity.find(params[:id])
+        render json: FitnessActivitySerializer.new(fitnessActivity).to_serialized_json 
+        fitnessActivity.destroy
+    end
+
     private
 
     def fitness_activity_params

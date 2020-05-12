@@ -31,12 +31,17 @@ export function fetchFitnessActivities() {
 
 export function deleteFitnessActivity(id) {
     return (dispatch) => {
-        fetch(`/fitness_activities`)
-    }
-     
+        fetch(`http://localhost:3001/fitness_activities/${id}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            }
+        })
+        .then(res => res.json())
+        .then(res => 
+            dispatch({ type: "DELETE_FITNESS_ACTIVITY", id: res.id })
+        )
+    } 
 }
 
-{
-    type: "DELETE_FITNESS_ACTIVITY",
-    id
-}
