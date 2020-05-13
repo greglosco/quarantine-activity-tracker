@@ -14,11 +14,11 @@ class Livestream extends Component {
         return (
             <div>
                 <li>
-                    DATE: {this.props.livestream.date} --  
-                    {this.props.livestream.name} -- 
-                    NOTES:{this.props.livestream.notes}
+                    DATE: {this.props.livestream.date}<br/>  
+                    NAME: {this.props.livestream.name}<br/> 
+                    NOTES: {this.props.livestream.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
-                    <button onClick={this.handleDeleteOnClick} >X</button><br/>
+                    <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>
             </div>
         )

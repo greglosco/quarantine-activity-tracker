@@ -13,9 +13,9 @@ class Livestreams extends Component {
         const livestreams = this.props.livestreams.map(livestream => (livestream.editing ? <EditLivestream key={livestream.id} livestream={livestream} updateLivestream={this.props.updateLivestream} /> : <Livestream key={livestream.id} livestream={livestream} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} />))
 
         return (
-            <div className="container">
-                Your Livestreams:
-                <ul>
+            <div>
+                <ul className="container">
+                    Your Livestreams:
                     {livestreams}
                 </ul>
             </div>

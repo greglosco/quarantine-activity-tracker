@@ -29,7 +29,7 @@ class RecipesInput extends Component {
 
     render() {
         return (
-            <div>
+            <div className="input" >Track Your Recipes:<br/>
                 <form onSubmit={this.handleOnSubmit} >
                     <input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} />
                     <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} />

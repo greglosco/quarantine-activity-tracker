@@ -29,7 +29,7 @@ class FitnessActivitiesInput extends Component {
 
     render() {
         return (
-            <div>
+            <div className="input" >Track Your Fitness Activities:<br/>
                 <form onSubmit={this.handleOnSubmit} >
                     <input type="text" value={this.state.exercise} name="exercise" onChange={this.handleOnChange} />
                     <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} />

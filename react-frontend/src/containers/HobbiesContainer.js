@@ -9,8 +9,8 @@ class HobbiesContainer extends Component {
 
     render() {
         return (
-            <div>Track Your Hobbies:
-                <HobbiesInput addHobby={this.props.addHobby} />
+            <div>
+                <HobbiesInput addHobby={this.props.addHobby} /><br/>
                 <Hobbies fetchHobbies={this.props.fetchHobbies} hobbies={this.props.hobbies} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} updateHobby={this.props.updateHobby} />
             </div>
         )

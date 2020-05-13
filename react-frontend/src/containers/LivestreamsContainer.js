@@ -9,8 +9,8 @@ class LivestreamsContainer extends Component {
 
     render() {
         return (
-            <div>Track Your Livestreams:
-                <LivestreamsInput addLivestream={this.props.addLivestream} />
+            <div>
+                <LivestreamsInput addLivestream={this.props.addLivestream} /><br/>
                 <Livestreams fetchLivestreams={this.props.fetchLivestreams} livestreams={this.props.livestreams} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} updateLivestream={this.props.updateLivestream} />
             </div>
         )

@@ -14,11 +14,11 @@ class Hobby extends Component {
         return (
             <div>
                 <li>
-                    DATE: {this.props.hobby.date} --  
-                    {this.props.hobby.name} -- 
-                    NOTES:{this.props.hobby.notes}
+                    DATE: {this.props.hobby.date}<br/>  
+                    NAME: {this.props.hobby.name}<br/> 
+                    NOTES:{this.props.hobby.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
-                    <button onClick={this.handleDeleteOnClick} >X</button><br/>
+                    <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>
             </div>
         )

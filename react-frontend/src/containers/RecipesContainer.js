@@ -9,8 +9,8 @@ class RecipesContainer extends Component {
 
     render() {
         return (
-            <div>Track Your Recipes:
-                <RecipesInput addRecipe={this.props.addRecipe} />
+            <div>
+                <RecipesInput addRecipe={this.props.addRecipe} /><br/>
                 <Recipes fetchRecipes={this.props.fetchRecipes} recipes={this.props.recipes} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} updateRecipe={this.props.updateRecipe} />
             </div>
         )

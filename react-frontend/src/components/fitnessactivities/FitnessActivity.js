@@ -14,11 +14,11 @@ class FitnessActivity extends Component {
         return (
             <div>
                 <li>
-                    DATE: {this.props.fitnessActivity.date} --  
-                    {this.props.fitnessActivity.exercise} -- 
-                    NOTES:{this.props.fitnessActivity.notes}
+                    DATE: {this.props.fitnessActivity.date}<br/>  
+                    EXERCISE: {this.props.fitnessActivity.exercise}<br/> 
+                    NOTES:{this.props.fitnessActivity.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
-                    <button onClick={this.handleDeleteOnClick} >X</button><br/>
+                    <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>
             </div>
         )

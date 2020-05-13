@@ -13,9 +13,9 @@ class Recipes extends Component {
         const recipes = this.props.recipes.map(recipe => (recipe.editing ? <EditRecipe key={recipe.id} recipe={recipe} updateRecipe={this.props.updateRecipe} /> : <Recipe key={recipe.id} recipe={recipe} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} />))
 
         return (
-            <div className="container">
-                Your Recipes:
-                <ul>
+            <div>
+                <ul className="container">
+                    Your Recipes:
                     {recipes}
                 </ul>
             </div>
