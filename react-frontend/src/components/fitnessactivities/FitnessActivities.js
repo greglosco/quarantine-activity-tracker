@@ -13,9 +13,12 @@ class FitnessActivities extends Component {
         const fitnessActivities = this.props.fitnessActivities.map(fitnessActivity => (fitnessActivity.editing ? <EditFitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /> : <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} />))
 
         return (
-            <ul>
-                {fitnessActivities}
-            </ul>
+            <div>
+            Your Fitness Activities:
+                <ul>
+                    {fitnessActivities}
+                </ul>
+            </div>
         )
     }
 }
