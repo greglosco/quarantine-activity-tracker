@@ -13,7 +13,7 @@ class Hobbies extends Component {
         const hobbies = this.props.hobbies.map(hobby => (hobby.editing ? <EditHobby key={hobby.id} hobby={hobby} updateHobby={this.props.updateHobby} /> : <Hobby key={hobby.id} hobby={hobby} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} />))
 
         return (
-            <div>
+            <div className="container">
                 Your Hobbies:
                 <ul>
                     {hobbies}

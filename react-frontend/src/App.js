@@ -17,14 +17,13 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <NavBar />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Welcome to the Quarantine Activity Tracker!
           </p>
         </header>
         <main>
-          <NavBar />
           <Route exact path='/' component={HomepageContainer} />
           <Route exact path='/fitnessactivities' component={FitnessActivitiesContainer} />
           <Route exact path='/recipes' component={RecipesContainer} />
