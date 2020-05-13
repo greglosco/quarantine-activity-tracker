@@ -31,9 +31,12 @@ class HobbiesInput extends Component {
         return (
             <div className="input" >Track Your Hobbies:<br/>
                 <form onSubmit={this.handleOnSubmit} >
-                    <input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} />
-                    <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} />
-                    <input type="textarea" value={this.state.notes} name="notes" onChange={this.handleOnChange} />
+                    <label>Hobby Name: </label><br/>
+                    <input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} /><br/>
+                    <label>Date: </label><br/>
+                    <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/>
+                    <label>Notes: </label><br/>
+                    <textarea rows="5" value={this.state.notes} name="notes" onChange={this.handleOnChange} /><br/>
                     <input type="submit" />
                 </form>
             </div>

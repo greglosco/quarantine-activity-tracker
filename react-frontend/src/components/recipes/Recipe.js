@@ -16,8 +16,7 @@ class Recipe extends Component {
                 <li>
                     DATE: {this.props.recipe.date}<br/>  
                     NAME: {this.props.recipe.name}<br/>  
-                    NOTES:<br/> 
-                    {this.props.recipe.notes}<br/> 
+                    NOTES: {this.props.recipe.notes}<br/> 
                     <button onClick={this.handleEditOnClick} >Edit</button>
                     <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>
