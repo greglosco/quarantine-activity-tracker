@@ -19,7 +19,7 @@ export function addHobby(state) {
     }
 }
 
-export function fetchHobbys() {
+export function fetchHobbies() {
     return dispatch => {
         fetch(`/hobbies`)
         .then(res => res.json())
