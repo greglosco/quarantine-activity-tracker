@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
     recipes: recipesReducer,
-    // hobbies: hobbiesReducer,
+    hobbies: hobbiesReducer,
     // livestreams: livestreamsReducer
 });
 
@@ -69,14 +69,35 @@ function recipesReducer(state = [], action) {
     }
 }
 
-// function hobbiesReducer(state = [], action) {
-//     switch (action.type) {
-//         case 'ADD_HOBBY':
-//             return {...state, hobbies: [...state.hobbies, action.exercise]}
-//         default:
-//             return state;
-//     }
-// }
+function hobbiesReducer(state = [], action) {
+    switch (action.type) {
+        case 'ADD_HOBBY':
+            const hobby = {name: action.data.name, date: action.data.date, notes: action.data.notes, id: action.data.id}
+            return [...state, hobby]
+        case 'RENDER_HOBBIES':
+            return [...action.res]
+        case 'DELETE_HOBBY':
+            const hobbies = state.filter(obj => obj.id !== action.id)
+            return [...hobbies]
+        case 'EDIT_HOBBY':
+            return state.map(hobby => hobby.id === action.id ? {...hobby, editing: !hobby.editing}: hobby )
+        case 'UPDATE_HOBBY':
+            return state.map(hobby => {
+                if (hobby.id === action.data.id) {
+                    return {
+                        ...hobby,
+                        name: action.data.name,
+                        date: action.data.date,
+                        notes: action.data.notes,
+                        id: action.data.id,
+                        editing: !hobby.editing
+                    }
+                } else return hobby;
+            })
+        default:
+            return state;
+    }
+}
 
 // function livestreamsReducer(state = [], action) {
 //     switch (action.type) {
