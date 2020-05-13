@@ -4,7 +4,7 @@ const rootReducer = combineReducers({
     fitnessActivities: fitnessActivitiesReducer,
     recipes: recipesReducer,
     hobbies: hobbiesReducer,
-    // livestreams: livestreamsReducer
+    livestreams: livestreamsReducer
 });
 
 export default rootReducer;
@@ -99,11 +99,32 @@ function hobbiesReducer(state = [], action) {
     }
 }
 
-// function livestreamsReducer(state = [], action) {
-//     switch (action.type) {
-//         case 'ADD_LIVESTREAM':
-//             return {...state, livestreams: [...state.livestreams, action.exercise]}
-//         default:
-//             return state;
-//     }
-// }
+function livestreamsReducer(state = [], action) {
+    switch (action.type) {
+        case 'ADD_LIVESTREAM':
+            const livestream = {name: action.data.name, date: action.data.date, notes: action.data.notes, id: action.data.id}
+            return [...state, livestream]
+        case 'RENDER_LIVESTREAMS':
+            return [...action.res]
+        case 'DELETE_LIVESTREAM':
+            const livestreams = state.filter(obj => obj.id !== action.id)
+            return [...livestreams]
+        case 'EDIT_LIVESTREAM':
+            return state.map(livestream => livestream.id === action.id ? {...livestream, editing: !livestream.editing}: livestream )
+        case 'UPDATE_LIVESTREAM':
+            return state.map(livestream => {
+                if (livestream.id === action.data.id) {
+                    return {
+                        ...livestream,
+                        name: action.data.name,
+                        date: action.data.date,
+                        notes: action.data.notes,
+                        id: action.data.id,
+                        editing: !livestream.editing
+                    }
+                } else return livestream;
+            })
+        default:
+            return state;
+    }
+}
