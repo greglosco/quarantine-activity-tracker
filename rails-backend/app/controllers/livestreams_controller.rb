@@ -1,0 +1,2 @@
+class LivestreamsController < ApplicationController
+end
