@@ -19,7 +19,7 @@ export function addLivestream(state) {
     }
 }
 
-export function fetchHobbies() {
+export function fetchLivestreams() {
     return dispatch => {
         fetch(`/livestreams`)
         .then(res => res.json())
