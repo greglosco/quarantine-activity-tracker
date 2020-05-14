@@ -12,11 +12,14 @@ class Recipe extends Component {
 
     render() {
         return (
-            <div>
-                <li>
-                    DATE: {this.props.recipe.date}<br/>  
-                    NAME: {this.props.recipe.name}<br/>  
-                    NOTES: {this.props.recipe.notes}<br/> 
+            <div className="ui divided list">
+                <li className="item">
+                <div className="ui horizontal label">DATE:</div>  
+                    {this.props.recipe.date}<br/>  
+                    <div className="ui horizontal label">NAME:</div>  
+                    {this.props.recipe.name}<br/>  
+                    <div className="ui horizontal label">NOTES:</div>  
+                    {this.props.recipe.notes}<br/> 
                     <button onClick={this.handleEditOnClick} >Edit</button>
                     <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>

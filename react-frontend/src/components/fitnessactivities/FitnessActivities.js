@@ -14,9 +14,11 @@ class FitnessActivities extends Component {
 
         return (
             <div >
-                <ul className="container">
-                Your Fitness Activities:
-                    {fitnessActivities}
+                <ul class="ui fluid green card">
+                    <div className="content">
+                        <div className="header">Your Fitness Activities:<br/></div>
+                        {fitnessActivities}
+                    </div>
                 </ul>
             </div>
         )

@@ -9,9 +9,9 @@ class FitnessActivitiesContainer extends Component {
 
     render() {
         return (
-            <div>
-                <FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} /><br/>
-                <FitnessActivities fetchFitnessActivities={this.props.fetchFitnessActivities} fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} />
+            <div className="ui padded centered cards">
+                <div className="ui card"><FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} /><br/></div>
+                <div className="ui card"><FitnessActivities fetchFitnessActivities={this.props.fetchFitnessActivities} fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /></div>
             </div>
         )
     }

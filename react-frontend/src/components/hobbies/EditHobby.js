@@ -28,7 +28,7 @@ class EditHobby extends Component {
 
     render() {
         return (
-            <div>
+            <div className="input">
                 <form onSubmit={this.handleOnSubmit} >
                     <label>Hobby Name: </label><br/>
                     <input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} /><br/>

@@ -28,7 +28,7 @@ class EditFitnessActivity extends Component {
 
     render() {
         return (
-            <div>
+            <div className="input">
                 <form onSubmit={this.handleOnSubmit} >
                     <label>Exercise Name: </label><br/>
                     <input type="text" value={this.state.exercise} name="exercise" onChange={this.handleOnChange} /><br/>

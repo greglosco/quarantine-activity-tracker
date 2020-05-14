@@ -14,9 +14,11 @@ class Hobbies extends Component {
 
         return (
             <div>
-                <ul className="container">
-                    Your Hobbies:
-                    {hobbies}
+                <ul class="ui red fluid card">
+                    <div className="content">
+                        <div className="header">Your Hobbies:<br/></div>
+                        {hobbies}
+                    </div>
                 </ul>
             </div>
         )

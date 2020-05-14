@@ -14,9 +14,13 @@ class Recipes extends Component {
 
         return (
             <div>
-                <ul className="container">
-                    Your Recipes:
-                    {recipes}
+                <ul className="ui fluid purple card">
+                    <div className="content">
+                        <div className="header">Your Recipes:<br/></div>
+                        <div>
+                        {recipes}
+                        </div>
+                    </div>
                 </ul>
             </div>
         )

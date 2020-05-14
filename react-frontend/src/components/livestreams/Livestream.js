@@ -12,11 +12,14 @@ class Livestream extends Component {
 
     render() {
         return (
-            <div>
-                <li>
-                    DATE: {this.props.livestream.date}<br/>  
-                    NAME: {this.props.livestream.name}<br/> 
-                    NOTES: {this.props.livestream.notes}<br/>
+            <div className="ui list">
+                <li className="item">
+                    <div className="ui horizontal label">DATE:</div>  
+                    {this.props.livestream.date}<br/>  
+                    <div className="ui horizontal label">NAME:</div>  
+                    {this.props.livestream.name}<br/> 
+                    <div className="ui horizontal label">NOTES:</div>  
+                    {this.props.livestream.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
                     <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>

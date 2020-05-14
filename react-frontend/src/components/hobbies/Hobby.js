@@ -12,11 +12,14 @@ class Hobby extends Component {
 
     render() {
         return (
-            <div>
-                <li>
-                    DATE: {this.props.hobby.date}<br/>  
-                    NAME: {this.props.hobby.name}<br/> 
-                    NOTES: {this.props.hobby.notes}<br/>
+            <div className="ui list">
+                <li className="item">
+                <div className="ui horizontal label">DATE:</div>  
+                    {this.props.hobby.date}<br/>  
+                    <div className="ui horizontal label">NAME:</div>  
+                    {this.props.hobby.name}<br/> 
+                    <div className="ui horizontal label">NOTES:</div>  
+                    {this.props.hobby.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
                     <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>

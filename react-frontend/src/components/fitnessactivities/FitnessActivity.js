@@ -12,11 +12,11 @@ class FitnessActivity extends Component {
 
     render() {
         return (
-            <div>
-                <li>
-                    DATE: {this.props.fitnessActivity.date}<br/>  
-                    EXERCISE: {this.props.fitnessActivity.exercise}<br/> 
-                    NOTES: {this.props.fitnessActivity.notes}<br/>
+            <div className="ui list" >
+                <li className="item">
+                    <label>DATE: </label> {this.props.fitnessActivity.date}<br/>  
+                    <label>EXERCISE: </label> {this.props.fitnessActivity.exercise}<br/> 
+                    <label>NOTES: </label> {this.props.fitnessActivity.notes}<br/>
                     <button onClick={this.handleEditOnClick} >Edit</button>
                     <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
                 </li>

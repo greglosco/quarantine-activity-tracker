@@ -8,12 +8,12 @@
   color: white;
 }
 
-.homepage {
+/* .homepage {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding-top: 10px;
   padding-bottom: 30px;
-}
+} */
 
 .navbar {
   background-color: rgb(102, 101, 101);
@@ -23,8 +23,8 @@
   padding: 14px 16px;
 }
 
-.container {
-  background-color: rgb(210, 1, 1);
+/* .container {
+  background-color: white;
   padding: 5px;
   margin: 5px;
   width: 70%;
@@ -32,14 +32,14 @@
   border-style: solid;
   border-color: black;
   display: inline-block
-}
+} */
 
-.container li {
+/* .container li {
   padding: 5px;
   display: table;
   margin: 5px auto;
   font-family: monospace;
-}
+} */
 
 .active {
   color: red;
@@ -51,8 +51,8 @@ html,body {
   background-color: darkgray;
  }
 
- .input {
-  background-color: rgb(210, 1, 1);
+ /* .input {
+  background-color: white;
   padding: 5px;
   margin: 5px;
   width: fit-content;
@@ -65,4 +65,18 @@ html,body {
 
  .input label {
    font-size: 14px;
+   font-weight: bold;
+ } */
+
+ button {
+  font-family: monospace;
+ }
+
+ .activity {
+   font-size: 14px;
+ }
+
+ .item label {
+  font-size: 16px;
+  font-weight: bold;
  }

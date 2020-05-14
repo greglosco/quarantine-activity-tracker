@@ -14,9 +14,11 @@ class Livestreams extends Component {
 
         return (
             <div>
-                <ul className="container">
-                    Your Livestreams:
-                    {livestreams}
+                <ul className="ui fluid orange card">
+                   <div className="content">
+                        <div className="header">Your Livestreams:<br/></div>
+                        {livestreams}
+                   </div>
                 </ul>
             </div>
         )
