@@ -9,9 +9,9 @@ class HobbiesContainer extends Component {
 
     render() {
         return (
-            <div>
-                <HobbiesInput addHobby={this.props.addHobby} /><br/>
-                <Hobbies fetchHobbies={this.props.fetchHobbies} hobbies={this.props.hobbies} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} updateHobby={this.props.updateHobby} />
+            <div className="ui padded one column grid">
+                <div className="row"><div className="five wide centered column"><HobbiesInput addHobby={this.props.addHobby} /><br/></div></div>
+                <div className="three wide centered column"><Hobbies fetchHobbies={this.props.fetchHobbies} hobbies={this.props.hobbies} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} updateHobby={this.props.updateHobby} /></div>
             </div>
         )
     }

@@ -28,15 +28,12 @@ class EditFitnessActivity extends Component {
 
     render() {
         return (
-            <div className="input">
+            <div className="ui form">
                 <form onSubmit={this.handleOnSubmit} >
-                    <label>Exercise Name: </label><br/>
-                    <input type="text" value={this.state.exercise} name="exercise" onChange={this.handleOnChange} /><br/>
-                    <label>Date: </label><br/>
-                    <input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/>
-                    <label>Notes: </label><br/>
-                    <textarea rows="5" value={this.state.notes} name="notes" onChange={this.handleOnChange} /><br/>
-                    <input type="submit" value="Update" />
+                    <div className="field"><label>Exercise Name: </label><input type="text" value={this.state.exercise} name="exercise" onChange={this.handleOnChange} /><br/></div>
+                    <div className="field"><label>Date: </label><input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/></div>
+                    <div className="field"><label>Notes: </label><textarea rows="1" value={this.state.notes} name="notes" onChange={this.handleOnChange} /><br/><br/></div>
+                    <input type="submit" value="Update" class="ui button" />
                 </form>
             </div>
         )

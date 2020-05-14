@@ -9,9 +9,9 @@ class RecipesContainer extends Component {
 
     render() {
         return (
-            <div>
-                <RecipesInput addRecipe={this.props.addRecipe} /><br/>
-                <Recipes fetchRecipes={this.props.fetchRecipes} recipes={this.props.recipes} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} updateRecipe={this.props.updateRecipe} />
+            <div className="ui padded one column grid">
+                <div className="row"><div className="five wide centered column"><RecipesInput addRecipe={this.props.addRecipe} /><br/></div></div>
+                <div className="three wide centered column"><Recipes fetchRecipes={this.props.fetchRecipes} recipes={this.props.recipes} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} updateRecipe={this.props.updateRecipe} /></div>
             </div>
         )
     }

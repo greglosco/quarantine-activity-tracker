@@ -21,7 +21,6 @@ class FitnessActivity extends Component {
                     </div>  
                 </div>
 
-
                 <div className="item">
                     <div className="ui horizontal label">Exercise:</div>  
                     {this.props.fitnessActivity.exercise}<br/> 
@@ -31,7 +30,6 @@ class FitnessActivity extends Component {
                     <div className="ui horizontal label">NOTES:</div>  
                     {this.props.fitnessActivity.notes}<br/><br/>
                 </div>
-
 
                 <div className="ui small compact buttons">
                     <button class="ui positive button" onClick={this.handleEditOnClick} >Edit</button>
