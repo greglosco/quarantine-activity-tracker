@@ -12,14 +12,33 @@ class FitnessActivity extends Component {
 
     render() {
         return (
-            <div className="ui list" >
-                <li className="item">
-                    <label>DATE: </label> {this.props.fitnessActivity.date}<br/>  
-                    <label>EXERCISE: </label> {this.props.fitnessActivity.exercise}<br/> 
-                    <label>NOTES: </label> {this.props.fitnessActivity.notes}<br/>
-                    <button onClick={this.handleEditOnClick} >Edit</button>
-                    <button onClick={this.handleDeleteOnClick} >Delete</button><br/>
-                </li>
+            <div className="ui divided middle aligned list">
+
+                <div className="item">
+                    <div className="content">
+                        <div className="ui horizontal label">DATE:</div>  
+                        {this.props.fitnessActivity.date}<br/>
+                    </div>  
+                </div>
+
+
+                <div className="item">
+                    <div className="ui horizontal label">Exercise:</div>  
+                    {this.props.fitnessActivity.exercise}<br/> 
+                </div>
+
+                <div className="item">
+                    <div className="ui horizontal label">NOTES:</div>  
+                    {this.props.fitnessActivity.notes}<br/><br/>
+                </div>
+
+
+                <div className="ui small compact buttons">
+                    <button class="ui positive button" onClick={this.handleEditOnClick} >Edit</button>
+                    <div class="or"></div>
+                    <button class="ui negative button" onClick={this.handleDeleteOnClick} >Delete</button><br/>
+                </div>
+
             </div>
         )
     }
