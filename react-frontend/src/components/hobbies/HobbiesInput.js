@@ -34,7 +34,7 @@ class HobbiesInput extends Component {
                     <div className="header">Track Your Hobbies:</div><br/>
                     <form className="ui form" onSubmit={this.handleOnSubmit} >
                         <div className="field">
-                            <label>Hobby Name: </label><input type="text" value={this.state.exercise} name="hobby" onChange={this.handleOnChange} /><br/>
+                            <label>Hobby Name: </label><input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} /><br/>
                         </div>
                         <div className="field">
                             <label>Date: </label><input type="date" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/>
