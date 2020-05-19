@@ -1,2 +1,2 @@
-web: cd ./react-frontend && npm i && npm start
-api: bundle exec rails s -p 3001
+web: cd ./react-frontend && npm start
+api: cd ./rails-backend bundle exec rails s -p 3001
