@@ -1,4 +1,5 @@
 export function addLivestream(state) {
+    console.log('C');
     return (dispatch) => {
         fetch(`/livestreams`, {
         method: 'POST',
@@ -13,10 +14,12 @@ export function addLivestream(state) {
         })
     })
     .then(res => res.json())
-    .then(data => 
+    .then(data => {
         dispatch({ type: 'ADD_LIVESTREAM', data })
-        )
+        console.log('D');
+      })
     }
+    console.log('E');
 }
 
 export function fetchLivestreams() {

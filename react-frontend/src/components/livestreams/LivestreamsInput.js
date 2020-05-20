@@ -11,7 +11,9 @@ class LivestreamsInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
+        console.log('A');
         this.props.addLivestream(this.state)
+        console.log('B');
         this.setState({
             name: "",
             date: "",
