@@ -1,5 +1,0 @@
-{
-    "scripts": {
-        "postinstall": "cd react-frontend && npm install"
-    }
-}
