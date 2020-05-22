@@ -3,7 +3,7 @@ export function addRecipe(state) {
         fetch(`https://quarantine-activity-tracker.herokuapp.com/recipes`, {
         method: 'POST',
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
             "Accept": "application/json"
         },
         body: JSON.stringify({
