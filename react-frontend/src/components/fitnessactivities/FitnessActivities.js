@@ -8,16 +8,36 @@ class FitnessActivities extends Component {
        this.props.fetchFitnessActivities()
     }
 
-    render() {
+    state = {
+        fitnessActivities: []
+    }
 
-        const fitnessActivities = this.props.fitnessActivities.map(fitnessActivity => (fitnessActivity.editing ? <EditFitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /> : <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} />))
+    handleOnClick = () => {
+        const sortedFAs = [...this.props.fitnessActivities].sort((a, b) => {
+            if (b.exercise > a.exercise) {
+                return -1
+            } else if (a.exercise < b.exercise) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+        this.setState({
+            fitnessActivities: [...sortedFAs]
+        })
+    }
+
+    render() {
+        const fitacts = this.state.fitnessActivities.length === 0 ? this.props.fitnessActivities : this.state.fitnessActivities
+        const renderedFitActs = fitacts.map(livestream => (livestream.editing ? <EditLivestream key={livestream.id} livestream={livestream} updateLivestream={this.props.updateLivestream} /> : <Livestream key={livestream.id} livestream={livestream} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} />))
 
         return (
             <div >
                 <ul class="ui fluid green card">
                     <div className="content">
                         <div className="header">Your Fitness Activities:<br/></div>
-                        {fitnessActivities}
+                        <button class="ui button" onClick={this.handleOnClick} >Sort Alphabetically by Name</button>
+                        {renderedFitActs}
                     </div>
                 </ul>
             </div>
