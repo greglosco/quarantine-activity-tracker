@@ -1,2 +1,0 @@
-web=https://github.com/heroku/heroku-buildpack-nodejs.git
-api=https://github.com/heroku/heroku-buildpack-ruby.git
