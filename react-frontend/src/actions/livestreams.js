@@ -1,7 +1,7 @@
 export function addLivestream(state) {
     console.log('C');
     return (dispatch) => {
-        fetch(`/livestreams`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/livestreams`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export function addLivestream(state) {
 
 export function fetchLivestreams() {
     return dispatch => {
-        fetch(`/livestreams`)
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/livestreams`)
         .then(res => res.json())
         .then(res => {
             dispatch({type: "RENDER_LIVESTREAMS", res})
@@ -34,7 +34,7 @@ export function fetchLivestreams() {
 
 export function deleteLivestream(id) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/livestreams/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/livestreams/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export function editLivestream(id) {
 
 export function updateLivestream(id, state) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/livestreams/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/livestreams/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json",

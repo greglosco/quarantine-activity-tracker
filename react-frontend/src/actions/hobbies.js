@@ -1,6 +1,6 @@
 export function addHobby(state) {
     return (dispatch) => {
-        fetch(`/hobbies`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/hobbies`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export function addHobby(state) {
 
 export function fetchHobbies() {
     return dispatch => {
-        fetch(`/hobbies`)
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/hobbies`)
         .then(res => res.json())
         .then(res => {
             dispatch({type: "RENDER_HOBBIES", res})
@@ -31,7 +31,7 @@ export function fetchHobbies() {
 
 export function deleteHobby(id) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/hobbies/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/hobbies/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export function editHobby(id) {
 
 export function updateHobby(id, state) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/hobbies/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/hobbies/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json",

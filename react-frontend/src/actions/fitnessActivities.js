@@ -1,6 +1,6 @@
 export function addFitnessActivity(state) {
     return (dispatch) => {
-        fetch(`/fitness_activities`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/fitness_activities`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export function addFitnessActivity(state) {
 
 export function fetchFitnessActivities() {
     return dispatch => {
-        fetch(`/fitness_activities`)
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/fitness_activities`)
         .then(res => res.json())
         .then(res => {
             dispatch({type: "RENDER_FITNESS_ACTIVITIES", res})
@@ -31,7 +31,7 @@ export function fetchFitnessActivities() {
 
 export function deleteFitnessActivity(id) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/fitness_activities/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/fitness_activities/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export function editFitnessActivity(id) {
 
 export function updateFitnessActivity(id, state) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/fitness_activities/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/fitness_activities/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json",

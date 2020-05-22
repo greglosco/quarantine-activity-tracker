@@ -31,7 +31,7 @@ export function fetchRecipes() {
 
 export function deleteRecipe(id) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/recipes/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/recipes/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export function editRecipe(id) {
 
 export function updateRecipe(id, state) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/recipes/${id}`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/recipes/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json",

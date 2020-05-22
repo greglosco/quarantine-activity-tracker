@@ -32,10 +32,7 @@ class RecipesInput extends Component {
             <div className="ui fluid green card" >
                 <div className="content">
                     <div className="header">Track Your Recipes:</div><br/>
-                    <form className="ui form" onSubmit={this.handleOnSubmit} 
-                    // name="form" netlify data-netlify="true" netlify-honeypot="bot-field" action="/recipes"
-                    >
-                    {/* <input type="hidden" name="form-name" value="form" /> */}
+                    <form className="ui form" onSubmit={this.handleOnSubmit} >
                         <div className="field">
                             <label>Recipe Name: </label><input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} /><br/>
                         </div>
