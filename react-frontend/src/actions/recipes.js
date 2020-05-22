@@ -24,8 +24,7 @@ export function fetchRecipes() {
         fetch(`/recipes`)
         .then(res => res.json())
         .then(res => {
-            console.log(res)
-            // dispatch({type: "RENDER_RECIPES", res})
+            dispatch({type: "RENDER_RECIPES", res})
         })
     }
 }

@@ -32,7 +32,7 @@ class RecipesInput extends Component {
             <div className="ui fluid green card" >
                 <div className="content">
                     <div className="header">Track Your Recipes:</div><br/>
-                    <form className="ui form" onSubmit={this.handleOnSubmit} >
+                    <form className="ui form" onSubmit={this.handleOnSubmit} name="recipesForm">
                     <input type="hidden" name="form-name" value="form" />
                         <div className="field">
                             <label>Recipe Name: </label><input type="text" value={this.state.name} name="name" onChange={this.handleOnChange} /><br/>
