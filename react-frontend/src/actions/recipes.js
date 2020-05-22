@@ -21,7 +21,7 @@ export function addRecipe(state) {
 
 export function fetchRecipes() {
     return dispatch => {
-        fetch(`/recipes`)
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/recipes`)
         .then(res => res.json())
         .then(res => {
             dispatch({type: "RENDER_RECIPES", res})
