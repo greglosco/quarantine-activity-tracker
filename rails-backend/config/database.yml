@@ -23,3 +23,6 @@ test:
 production:
   <<: *default
   database: my_database_production
+
+options: 
+  raise_not_found_error: false
