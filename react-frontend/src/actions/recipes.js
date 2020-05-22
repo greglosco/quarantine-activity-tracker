@@ -1,6 +1,6 @@
 export function addRecipe(state) {
     return (dispatch) => {
-        fetch(`/recipes`, {
+        fetch(`https://quarantine-activity-tracker.herokuapp.com/recipes`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
