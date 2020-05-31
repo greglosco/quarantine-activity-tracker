@@ -13,7 +13,8 @@ import { fetchLivestreams, deleteLivestream, editLivestream, updateLivestream } 
 
 import { connect } from 'react-redux';
 
-
+//destructure props, assign to this.props
+//linting rules
 
 class HomepageContainer extends Component {
 
