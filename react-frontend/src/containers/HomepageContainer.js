@@ -19,6 +19,13 @@ import { connect } from 'react-redux';
 class HomepageContainer extends Component {
 
     render() {
+
+        const { fitnessActivities, fetchFitnessActivities, deleteFitnessActivity, editFitnessActivity, updateFitnessActivity,
+            recipes, fetchRecipes, deleteRecipe, editRecipe, updateRecipe,
+            hobbies, fetchHobbies, deleteHobby, editHobby, updateHobby,
+            livestreams, fetchLivestreams, deleteLivestream, editLivestream, updateLivestream
+        } = this.props;
+
         return (
             <div className="ui padded four column grid">
                 <div className="row" >
