@@ -13,8 +13,8 @@ class HobbiesContainer extends Component {
 
         return (
             <div className="ui padded one column grid">
-                <div className="row"><div className="five wide centered column"><HobbiesInput addHobby={this.props.addHobby} /><br/></div></div>
-                <div className="three wide centered column"><Hobbies fetchHobbies={this.props.fetchHobbies} hobbies={this.props.hobbies} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} updateHobby={this.props.updateHobby} /></div>
+                <div className="row"><div className="five wide centered column"><HobbiesInput addHobby={addHobby} /><br/></div></div>
+                <div className="three wide centered column"><Hobbies fetchHobbies={fetchHobbies} hobbies={hobbies} deleteHobby={deleteHobby} editHobby={editHobby} updateHobby={updateHobby} /></div>
             </div>
         )
     }
