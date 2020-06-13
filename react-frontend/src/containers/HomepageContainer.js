@@ -29,10 +29,10 @@ class HomepageContainer extends Component {
         return (
             <div className="ui padded four column grid">
                 <div className="row" >
-                        <div class="column"><FitnessActivities fitnessActivities={this.props.fitnessActivities} fetchFitnessActivities={this.props.fetchFitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /></div>
-                        <div class="column"><Recipes recipes={this.props.recipes} fetchRecipes={this.props.fetchRecipes} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} updateRecipe={this.props.updateRecipe} /></div>
-                        <div class="column"><Hobbies hobbies={this.props.hobbies} fetchHobbies={this.props.fetchHobbies} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} updateHobby={this.props.updateHobby} /></div>
-                        <div class="column"><Livestreams livestreams={this.props.livestreams} fetchLivestreams={this.props.fetchLivestreams} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} updateLivestream={this.props.updateLivestream} /></div>
+                        <div class="column"><FitnessActivities fitnessActivities={fitnessActivities} fetchFitnessActivities={fetchFitnessActivities} deleteFitnessActivity={deleteFitnessActivity} editFitnessActivity={editFitnessActivity} updateFitnessActivity={updateFitnessActivity} /></div>
+                        <div class="column"><Recipes recipes={recipes} fetchRecipes={fetchRecipes} deleteRecipe={deleteRecipe} editRecipe={editRecipe} updateRecipe={updateRecipe} /></div>
+                        <div class="column"><Hobbies hobbies={hobbies} fetchHobbies={fetchHobbies} deleteHobby={deleteHobby} editHobby={editHobby} updateHobby={updateHobby} /></div>
+                        <div class="column"><Livestreams livestreams={livestreams} fetchLivestreams={fetchLivestreams} deleteLivestream={deleteLivestream} editLivestream={editLivestream} updateLivestream={updateLivestream} /></div>
                 </div>
             </div>
         )
