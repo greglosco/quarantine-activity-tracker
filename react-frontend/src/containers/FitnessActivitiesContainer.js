@@ -14,9 +14,9 @@ class FitnessActivitiesContainer extends Component {
         return (
             <div className="ui padded one column grid">
                 <div className="row">
-                    <div className="five wide centered column"><FitnessActivitiesInput addFitnessActivity={this.props.addFitnessActivity} /><br/></div>
+                    <div className="five wide centered column"><FitnessActivitiesInput addFitnessActivity={addFitnessActivity} /><br/></div>
                 </div>
-                    <div className="three wide centered column"><FitnessActivities fetchFitnessActivities={this.props.fetchFitnessActivities} fitnessActivities={this.props.fitnessActivities} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /></div>
+                    <div className="three wide centered column"><FitnessActivities fetchFitnessActivities={fetchFitnessActivities} fitnessActivities={fitnessActivities} deleteFitnessActivity={deleteFitnessActivity} editFitnessActivity={editFitnessActivity} updateFitnessActivity={updateFitnessActivity} /></div>
             </div>
         )
     }
