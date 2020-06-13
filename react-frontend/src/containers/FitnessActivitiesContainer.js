@@ -8,6 +8,9 @@ import { connect } from 'react-redux';
 class FitnessActivitiesContainer extends Component {
 
     render() {
+
+        const { addFitnessActivity, fetchFitnessActivities, fitnessActivities, deleteFitnessActivity, editFitnessActivity, updateFitnessActivity } = this.props;
+
         return (
             <div className="ui padded one column grid">
                 <div className="row">
