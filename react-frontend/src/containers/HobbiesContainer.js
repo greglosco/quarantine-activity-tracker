@@ -8,6 +8,9 @@ import { connect } from 'react-redux';
 class HobbiesContainer extends Component {
 
     render() {
+
+        const { addHobby, fetchHobbies, hobbies, deleteHobby, editHobby, updateHobby } = this.props;
+
         return (
             <div className="ui padded one column grid">
                 <div className="row"><div className="five wide centered column"><HobbiesInput addHobby={this.props.addHobby} /><br/></div></div>
