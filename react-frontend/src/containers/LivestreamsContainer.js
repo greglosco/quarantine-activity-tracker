@@ -8,6 +8,9 @@ import { connect } from 'react-redux';
 class LivestreamsContainer extends Component {
 
     render() {
+
+        const { addLivestream, fetchLivestreams, livestreams, deleteLivestream, editLivestream, updateLivestream } = this.props;
+
         return (
             <div className="ui padded one column grid">
                 <div className="row"><div className="five wide centered column"><LivestreamsInput addLivestream={this.props.addLivestream} /><br/></div></div>
