@@ -13,8 +13,8 @@ class LivestreamsContainer extends Component {
 
         return (
             <div className="ui padded one column grid">
-                <div className="row"><div className="five wide centered column"><LivestreamsInput addLivestream={this.props.addLivestream} /><br/></div></div>
-                <div className="three wide centered column"><Livestreams fetchLivestreams={this.props.fetchLivestreams} livestreams={this.props.livestreams} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} updateLivestream={this.props.updateLivestream} /></div>
+                <div className="row"><div className="five wide centered column"><LivestreamsInput addLivestream={addLivestream} /><br/></div></div>
+                <div className="three wide centered column"><Livestreams fetchLivestreams={fetchLivestreams} livestreams={livestreams} deleteLivestream={deleteLivestream} editLivestream={editLivestream} updateLivestream={updateLivestream} /></div>
             </div>
         )
     }
