@@ -13,8 +13,8 @@ class RecipesContainer extends Component {
 
         return (
             <div className="ui padded one column grid">
-                <div className="row"><div className="five wide centered column"><RecipesInput addRecipe={this.props.addRecipe} /><br/></div></div>
-                <div className="three wide centered column"><Recipes fetchRecipes={this.props.fetchRecipes} recipes={this.props.recipes} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} updateRecipe={this.props.updateRecipe} /></div>
+                <div className="row"><div className="five wide centered column"><RecipesInput addRecipe={addRecipe} /><br/></div></div>
+                <div className="three wide centered column"><Recipes fetchRecipes={fetchRecipes} recipes={recipes} deleteRecipe={deleteRecipe} editRecipe={editRecipe} updateRecipe={updateRecipe} /></div>
             </div>
         )
     }
