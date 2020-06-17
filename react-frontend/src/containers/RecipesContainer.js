@@ -8,6 +8,9 @@ import { connect } from 'react-redux';
 class RecipesContainer extends Component {
 
     render() {
+
+        const { addRecipe, fetchRecipes, recipes, deleteRecipe, editRecipe, updateRecipe } = this.props;
+
         return (
             <div className="ui padded one column grid">
                 <div className="row"><div className="five wide centered column"><RecipesInput addRecipe={this.props.addRecipe} /><br/></div></div>
