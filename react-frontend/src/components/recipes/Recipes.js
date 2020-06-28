@@ -32,8 +32,8 @@ class Recipes extends Component {
     render() {
         
         const { recipes, updateRecipe, deleteRecipe, editRecipe } = this.props;
-        const recipes = this.state.recipes.length === 0 ? this.props.recipes : this.state.recipes
-        const renderedRecipes = recipes.map(recipe => (recipe.editing ? <EditRecipe key={recipe.id} recipe={recipe} updateRecipe={this.props.updateRecipe} /> : <Recipe key={recipe.id} recipe={recipe} deleteRecipe={this.props.deleteRecipe} editRecipe={this.props.editRecipe} />))
+        const recipes = this.state.recipes.length === 0 ? recipes : this.state.recipes
+        const renderedRecipes = recipes.map(recipe => (recipe.editing ? <EditRecipe key={recipe.id} recipe={recipe} updateRecipe={updateRecipe} /> : <Recipe key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe} editRecipe={editRecipe} />))
         
         return (
             <div>
