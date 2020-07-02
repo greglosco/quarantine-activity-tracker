@@ -30,8 +30,8 @@ class FitnessActivities extends Component {
     render() {
 
         const { fitnessActivities, editFitnessActivity, updateFitnessActivity, deleteFitnessActivity} = this.props;
-        const fitacts = this.state.fitnessActivities.length === 0 ? this.props.fitnessActivities : this.state.fitnessActivities
-        const renderedFitActs = fitacts.map(fitnessActivity => (fitnessActivity.editing ? <EditFitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} updateFitnessActivity={this.props.updateFitnessActivity} /> : <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={this.props.deleteFitnessActivity} editFitnessActivity={this.props.editFitnessActivity} />))
+        const fitacts = this.state.fitnessActivities.length === 0 ? fitnessActivities : this.state.fitnessActivities
+        const renderedFitActs = fitacts.map(fitnessActivity => (fitnessActivity.editing ? <EditFitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} updateFitnessActivity={updateFitnessActivity} /> : <FitnessActivity key={fitnessActivity.id} fitnessActivity={fitnessActivity} deleteFitnessActivity={deleteFitnessActivity} editFitnessActivity={editFitnessActivity} />))
 
         return (
             <div >
