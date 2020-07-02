@@ -30,8 +30,8 @@ class Livestreams extends Component {
     render() {
 
         const { updateLivestream, deleteLivestream, editLivestream, livestreams} = this.props;
-        const livestreams = this.state.livestreams.length === 0 ? this.props.livestreams : this.state.livestreams
-        const renderedLivestreams = livestreams.map(livestream => (livestream.editing ? <EditLivestream key={livestream.id} livestream={livestream} updateLivestream={this.props.updateLivestream} /> : <Livestream key={livestream.id} livestream={livestream} deleteLivestream={this.props.deleteLivestream} editLivestream={this.props.editLivestream} />))
+        const livestreams = this.state.livestreams.length === 0 ? livestreams : this.state.livestreams
+        const renderedLivestreams = livestreams.map(livestream => (livestream.editing ? <EditLivestream key={livestream.id} livestream={livestream} updateLivestream={updateLivestream} /> : <Livestream key={livestream.id} livestream={livestream} deleteLivestream={deleteLivestream} editLivestream={editLivestream} />))
 
         return (
             <div>
