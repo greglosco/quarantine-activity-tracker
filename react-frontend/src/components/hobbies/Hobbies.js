@@ -30,8 +30,8 @@ class Hobbies extends Component {
     render() {
         
         const { hobbies, updateHobby, editHobby, deleteHobby} = this.props;
-        const hobbies = this.state.hobbies.length === 0 ? this.props.hobbies : this.state.hobbies
-        const renderedHobbies = hobbies.map(hobby => (hobby.editing ? <EditHobby key={hobby.id} hobby={hobby} updateHobby={this.props.updateHobby} /> : <Hobby key={hobby.id} hobby={hobby} deleteHobby={this.props.deleteHobby} editHobby={this.props.editHobby} />))
+        const hobbies = this.state.hobbies.length === 0 ? hobbies : this.state.hobbies
+        const renderedHobbies = hobbies.map(hobby => (hobby.editing ? <EditHobby key={hobby.id} hobby={hobby} updateHobby={updateHobby} /> : <Hobby key={hobby.id} hobby={hobby} deleteHobby={deleteHobby} editHobby={editHobby} />))
 
         return (
             <div>
